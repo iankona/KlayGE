@@ -516,18 +516,24 @@ namespace KlayGE
 				os << " texture=\"" << mtl.albedo_tex_name << "\"";
 			}
 			os << "/>" << std::endl;
-			os << "\t\t\t<metalness value=\"" << mtl.metalness << "\"";
-			if (!mtl.metalness_tex_name.empty())
+			if (mtl.metalness > 0)
 			{
-				os << " texture=\"" << mtl.metalness_tex_name << "\"";
+				os << "\t\t\t<metalness value=\"" << mtl.metalness << "\"";
+				if (!mtl.metalness_tex_name.empty())
+				{
+					os << " texture=\"" << mtl.metalness_tex_name << "\"";
+				}
+				os << "/>" << std::endl;
 			}
-			os << "/>" << std::endl;
-			os << "\t\t\t<glossiness value=\"" << mtl.glossiness << "\"";
-			if (!mtl.glossiness_tex_name.empty())
+			if (mtl.glossiness > 0)
 			{
-				os << " texture=\"" << mtl.glossiness_tex_name << "\"";
+				os << "\t\t\t<glossiness value=\"" << mtl.glossiness << "\"";
+				if (!mtl.glossiness_tex_name.empty())
+				{
+					os << " texture=\"" << mtl.glossiness_tex_name << "\"";
+				}
+				os << "/>" << std::endl;
 			}
-			os << "/>" << std::endl;
 			if ((mtl.emissive[0] != 0) || (mtl.emissive[1] != 0) || (mtl.emissive[2] != 0)
 				|| !mtl.emissive_tex_name.empty())
 			{

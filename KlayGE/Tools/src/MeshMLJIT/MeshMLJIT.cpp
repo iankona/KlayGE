@@ -172,7 +172,7 @@ namespace
 
 			mtl.albedo = float4(0, 0, 0, 1);
 			mtl.metalness = 0;
-			mtl.glossiness = Shininess2Glossiness(16);
+			mtl.glossiness = 0;
 			mtl.emissive = float3(0, 0, 0);
 			mtl.transparent = false;
 			mtl.alpha_test = 0;
@@ -338,6 +338,7 @@ namespace
 				{
 					offline_mtl.texture_slots.emplace_back("Height", attr->ValueString());
 				}
+
 				attr = height_node->Attrib("offset");
 				if (attr)
 				{
