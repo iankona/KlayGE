@@ -19,12 +19,12 @@
 * 	6.
 
 # 近期目标：
-* 	1.熟悉引擎架构，分清架构实现和库实现，画架构框图（xmind）、库调用图（freemind）和依赖层图（freemind）。
+* 	1.熟悉引擎架构，分清架构实现和库实现，使用xmind画架构框图、库调用图和依赖层图。
 * 	2.编写各层的接口API文档。
 * 	3.底层实现去除其他API，保留OpenGLAPI和D3D12（待定）。
 
-# 原文档：
 
+# 原文档：
 # KlayGE
 KlayGE is a cross-platform open source game engine with plugin-based architecture. It's started since 2003. The explicit goal of KlayGE is: to arm your engine with cutting-edge technology. It provides a framework to make game development, testing, porting as simple as possible. 
 
